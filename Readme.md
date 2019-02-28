@@ -6,7 +6,7 @@
 5:这个项目本来是公司的官网 后面因某些原因废弃了 但是自己已经写好了  毕竟是自己的第一个node项目 就上传到github 方便自己以后察看;
 
 
-## Installation
+## Getting Started
 
 ```bash
 $ git clone https://github.com/liuye1296/eggnode.git
