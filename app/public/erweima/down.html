@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>iSales爱售宝专业汽车销售管理平台，用技术实现销售的智能化管理</title>
+    <meta name="Keywords" content="iSales,爱售宝,汽车销售,智能化,精益管理,绩效管理,经销商管理,区域管理,效率,工具,CRM,移动培训,移动办公,移动销售,4S店,汽车">
+    <meta name="description" content="iSales爱售宝实现汽车销售数据化、自动化管理：数据化，iSales通过量化绩效管理实现业绩增长；自动化，iSales用程序取代80%的人工操作，提升效率、降低成本。">
+    <script src="flexible.js" type="text/javascript"></script>
+    <style>
+        *{
+            -webkit-touch-callout:none;
+            -webkit-user-select:none;
+            -khtml-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        input {
+            -webkit-user-select:auto; /*webkit浏览器*/
+        }
+        textarea{
+            -webkit-user-select:auto; /*webkit浏览器*/
+        }
+        html {
+            background:#fff;
+            overflow-y:scroll;
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            overflow: auto
+        }
+        iframe{
+            opacity:0;
+            display:none;
+        }
+        .hx-header, .le, .le_r {
+            background-color:#1899dd
+        }
+        html * {
+            outline:0;
+            -webkit-text-size-adjust:none;
+            -webkit-tap-highlight-color:transparent
+        }
+        body, html {
+            font-family: Helvetica,arial,sans-serif;
+            font-size: 14px;
+            width:100%;
+        }
+        article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+            margin:0;
+            padding:0
+        }
+        input, select, textarea {
+            font-size:100%
+        }
+        table {
+            border-collapse:collapse;
+            border-spacing:0
+        }
+        fieldset, img {
+            border:0
+        }
+        abbr, acronym {
+            border:0;
+            font-variant:normal
+        }
+        del {
+            text-decoration:line-through
+        }
+        address, caption, cite, code, dfn, em, th, var {
+            font-style:normal;
+            font-weight:500
+        }
+        ol, ul {
+            list-style:none
+        }
+        caption, th {
+            text-align:left
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-size:100%;
+            font-weight:500
+        }
+        q:after, q:before {
+            content:''
+        }
+        sub, sup {
+            font-size:75%;
+            line-height:0;
+            position:relative;
+            vertical-align:baseline
+        }
+        sup {
+            top:-.5em
+        }
+        sub {
+            bottom:-.25em
+        }
+        a {
+            text-decoration:none;
+
+        }
+        button {
+            font-size:.28rem
+        }
+        .bj{
+            background: url("isales_phone_foot_bjm.png")no-repeat 0 0;
+            width:7.5rem;
+            height:8.8rem;
+            background-size:7.5rem 12.18rem;
+        }
+        .weix{
+          text-align: center;
+            color: gray;
+        }
+        .index-foot-butta{
+            display: block;
+            width: 5.66rem;
+            height: .75rem;
+            line-height: .75rem;
+            font-size: .3rem;
+            margin: .7rem auto .2rem auto;
+            text-align: center;
+            color: white;
+            background-color: #0097e0;
+            border-radius: .3rem;
+        }
+        .footer-bg {
+            background: #2D2D2D;
+            color: #E4E4E4;
+            width: 100%;
+            padding: .3rem 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+        }
+        .entry-con {
+            font-size: .25rem;
+            padding: 0 .9rem;
+         }
+      /*  .index-foot-text h1 {
+            font-size: .64rem;
+            text-align: center;
+        }
+        .index-foot-text h2 {
+            margin-top: .22rem;
+            font-size: .52rem;
+            text-align: center;
+        }*/
+    </style>
+</head>
+
+<body>
+        <div class="bj"></div>
+
+
+       <!-- <div class="weix" style="display:none">(请点击右上角用浏览器打开)</div>-->
+       <!-- <div class="index-foot-text">
+            <h1>iSales爱售宝 </h1>
+            <h2>让卖车更简单 </h2>
+        </div>-->
+        <a class="index-foot-butta" >点击下载</a>
+        <p class="entry-con" >如无法下载，请在右上角选择“在浏览器中打开”，再选择下载应用</p>
+        <!--<div class="footer-bg" style="display: none">
+
+        </div>-->
+<script type="text/javascript">
+            window.onload = function(){
+                var   weix=document.querySelector(".footer-bg");
+                if(isWeiXin()){
+                   /* if (/iphone|ipad|ipod/.test(ua)) {
+
+                    }else{*/
+                        weix.style.display="block";
+                 /*   }*/
+
+                }else{
+                    weix.style.display="none";
+                }
+            }
+            function isWeiXin(){
+                var ua = window.navigator.userAgent.toLowerCase();
+                if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            document.querySelector(".index-foot-butta").addEventListener("click",function (e) {
+                var ua = navigator.userAgent.toLowerCase();
+                if (/iphone|ipad|ipod/.test(ua)) {
+                    window.location.href="https://itunes.apple.com/cn/app/ai-shou-bao-zui-zhuan-ye-qi/id1134307848?mt=8";
+                }else{
+                    window.location.href="http://www.isales.cn/download/Isale_isalesbaby_unsign_signed.apk";
+                }
+            })
+            
+</script>
+</body>
+</html>

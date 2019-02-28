@@ -1,0 +1,54 @@
+<div class="index-list-di">
+    <div class="ovhide page">
+      <div class="index-list-title">服务承诺</div>
+      <div class="ovhide">
+        <div class="g-left index-d-yy">
+          <div>
+            <div class="fw-div-text">
+              <div class="title">全天热线</div>
+              <div>24小时热线全天候为您在线，解决疑惑。</div>
+            </div>
+            <div>
+              <img src="./assets/images/index/index_4.png">
+            </div>
+          </div>
+        </div>
+        <div class="g-right index-d-yy">
+          <div>
+            <div class="fw-div-text">
+              <div class="title">新客户30天辅导</div>
+              <div>联系客户，提供服务、培训等。让AI工具发挥作用。 </div>
+            </div>
+            <div>
+              <img src="./assets/images/index/index_5.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ovhide" style="margin-top: 38px;">
+        <div class="g-left index-d-yy">
+          <div>
+            <div class="fw-div-text">
+              <div class="title">微信群答疑</div>
+              <div>微信的便捷沟通特性，及时在线提供所需服务。</div>
+            </div>
+            <div>
+              <img src="./assets/images/index/index_6.png">
+            </div>
+          </div>
+        </div>
+        <div class="g-right index-d-yy">
+          <div>
+            <div class="fw-div-text">
+              <div class="title">专属客户经理</div>
+              <div>为客户提供专属定制服务，及时响应客户需求。</div>
+            </div>
+            <div>
+              <img src="./assets/images/index/index_7.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

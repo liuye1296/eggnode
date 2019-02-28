@@ -1,0 +1,45 @@
+<div>
+    <div class="syong">
+        他们正在使用
+        <img src="../mobile/assets/cslogo.png">
+        <img src="../mobile/assets/cslogo.png" class="cslogo" />
+    </div>
+    <div class="chetu">
+        <img src="../mobile/assets/chetu_01.png" />
+        <img src="../mobile/assets/chetu_02.png" />
+        <img src="../mobile/assets/chetu_03.png" />
+    </div>
+</div>
+<div>
+    <div class="index_foot" />
+</div>
+</div>
+<div>
+    <a class="foot-a" href="./abotme.html">关于我们</a>
+    <a class="foot-a" href="./sy.html?type=3">招商政策与报名</a>
+    <a class="foot-a" href="./sy.html?type=3">免费使用 小i智能名片</a>
+    <a href="http://www.miitbeian.gov.cn" target="_blank" class="bhao">粤ICP备14000445号-1</a>
+</div>
+<script src="../mobile/lib/js/swiper.min.js" type="text/javascript"></script>
+<script src="../mobile/js/main.js" type="text/javascript"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c05a4d5b0817d6c47b1dc9228bbf9dfc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>

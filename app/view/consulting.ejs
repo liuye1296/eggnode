@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <%- include("./pubilcViews/matenotitle.jstl") %>
+    <title>isales_文章资讯</title>
+</head>
+
+<body>
+        <%- include("./pubilcViews/title.jstl") %>
+        <%- include("./pubilcViews/lunbo.jstl") %>
+    <div class="page">
+        <div class="con-zx">资讯</div>
+    </div>
+    <div style="border-bottom: 1px solid #e8e8e8"></div>
+    <div class="page">
+        <section id='advisory_content'>
+                <div>
+                <% success.list.map(res=>{ 
+                     const split_=res.PUBLISH_TIME.split('-')
+                    %>
+                    
+                        <a href="./consultingxq.html?id=<%= res.ADVISORY_ID %>" class="ovhide condiv consultingxq ">
+                            <div class="g-left" style="margin-right: 30px">
+                                <p class="con-h1"><%= split_[1] %></p>
+                                <%= split_[2] %>,
+                                <%= split_[0] %>
+                            </div>
+                            <div class="g-left">
+                                <div class="condiv-title"><%= res.TITLE %></div>
+                                <div class="condiv-zw"><%= res.INTRO %>
+                                </div>
+                            </div>
+                        </a>
+                 
+                <% }) %>
+            </div>
+            <div id='page' class="page-fx">
+                <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-4">
+                    <div class="layui-laypage-count">共 <%=  success.totalRecords %> 条，第<b style="color:red"> <%= success.currentPageIndex %></b>/<%= success.pageCount %>页</div>
+                    <a href="./consulting.html?page_num=1" class="layui-laypage-prev">首页</a>
+                    <% if(1===success.currentPageIndex){ %>
+                        <a href="javascript:;"class="layui-laypage-prev">上一页</a>
+                    <% }else{%>
+                        <a href="./consulting.html?page_num=<%= success.currentPageIndex-1 %>"class="layui-laypage-prev">上一页</a>                       
+                    <% }%>   
+                    <% if(success.pageCount===success.currentPageIndex){ %>
+                        <a href="javascript:;" class="layui-laypage-next">下一页</a>
+                    <% }else{%>
+                        <a href="./consulting.html?page_num=<%= success.currentPageIndex+1 %>" class="layui-laypage-next">下一页</a>                      
+                    <% }%>
+                    
+                    <a href="./consulting.html?page_num=<%= success.pageCount %>" class="layui-laypage-prev" style="margin: 0 0 5px 0;">尾页</a>
+                    <a class="layui-laypage-skip">到第<input type="text" id='page_num'onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') "  class="layui-input">页<button type="button" id='go' class="layui-laypage-btn">确定</button></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div style="height: 99px;"></div>
+    </div>
+    </div>
+    <%- include('./pubilcViews/foot.jstl',{success:foot}) %>
+    <script>
+        document.querySelectorAll('.hread-li')[5].setAttribute('class', 'hread-li click')
+        $(function () {
+            $("#go").on('click', function () {//下一頁
+                var page_num=$('#page_num').val();
+                if(page_num){
+                    page_num=page_num>0?page_num:1;
+                    window.location.href='./consulting.html?page_num='+page_num;
+                }
+            })
+        })
+    </script>
+</body>
+
+
+
+</html>

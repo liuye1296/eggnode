@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%- include("./pubilcViews/mate.jstl") %>
+</head>
+
+<body>
+  <%- include("./pubilcViews/title.jstl") %>
+    <%- include("./pubilcViews/lunbo.jstl") %>
+
+      <!-- 主体 -->
+      <div class="page">
+        <!-- 三个产品 -->
+        <div class="ovhide" style="position:relative;">
+          <div class="g-left doprder">
+            <div class="xi"></div>
+            <div class="name">小 i 智能名片</div>
+            <div>让社交 变成交</div>
+          </div>
+          <div class="conet doprder">
+            <div class="asb">
+              <div class="asb-img"></div>
+              <div class="name">爱售宝</div>
+              <div>汽车销售精细化管理工具</div>
+            </div>
+          </div>
+          <div class="g-right doprder">
+            <div class="jksq">
+              <div class="jksq-img"></div>
+              <div class="name">集客神器</div>
+              <div>线下活动必备工具</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  列表 -->
+      <div class="index-list-div" style="background: #f8f8f8">
+        <div class="ovhide condiv_">
+          <div class="g-left list-text">
+            <div class="xiaoi">
+
+            </div>
+            <div class="sm-bold">
+              小i智能名片，一张可以帮你卖车的名片
+            </div>
+            <div>
+              她用小程序连接10亿用户轻松获客，用AI算法实现精准成交；
+              <br/> 独有七大赋能系统，让社交,变成交。
+            </div>
+            <a class="ckxq" href="./ak.html">
+              查看详情
+            </a>
+          </div>
+          <div class="g-right">
+            <div>
+              <img src="./assets/images/index/index_0.png"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="index-list-div">
+        <div class="ovhide condiv_">
+          <div class="g-right list-text">
+            <div class="aishoubao">
+
+            </div>
+            <div class="sm-bold">
+              爱售宝，汽车销售精细化管理工具
+            </div>
+            <div>
+              针对“车商管理四大难题”获客难、客户易流失、销售跟进不及时、
+              <br/> 团队执行力差等提供实操性解决方案。用技术实现汽车销量提升。
+            </div>
+            <a class="ckxq lan" href="./isales.html">
+              查看详情
+            </a>
+          </div>
+          <div class="g-left">
+            <div>
+              <img src="./assets/images/index/index_1.png"> </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="index-list-div" style="background: #f8f8f8">
+        <div class="ovhide condiv_">
+          <div class="g-left list-text">
+            <div class="jikeshenqi">
+
+            </div>
+            <div class="sm-bold">
+              集客神器，线下活动必备工具
+            </div>
+            <div>
+              促销标配，邀请客户参与手机抽奖活动，减少物料，留资高效。
+              <br/> 展会必备，利用竞技游戏引爆全场人气，组织简单，自动留资，
+              <br/> 与“爱售宝app”结合使用，实现线索收集、客户管理全数字化。
+              <br/>
+            </div>
+            <a class="ckxq lan" href="./jq.html">
+              查看详情
+            </a>
+          </div>
+          <div class="g-right">
+            <div>
+              <img src="./assets/images/index/index_2.png"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="index-list-di">
+        <div class="ovhide page">
+          <div class="index-list-title">资讯</div>
+          <div class="g-left">
+            <div class="wenzli">
+              <section id='zx-list'>
+                <% success && success.list.map((res,index)=>{ 
+                  const split_=res.PUBLISH_TIME.split('-')
+                %>
+
+                  <a href="./consultingxq.html?id=<%= res.ADVISORY_ID %>"><%= index+1 %>、
+                      <%= res.TITLE %>
+                        <span><%= split_[2] %>/
+                            <%= split_[1] %></span>
+                  </a>
+                  <% }) %>
+              </section>
+              <a class="ckgd" target=" _blank" href="./consulting.html">查看更多></a>
+            </div>
+          </div>
+          <div class="g-right">
+            <div>
+              <img src="./assets/images/index/index_3.png"> </div>
+          </div>
+
+        </div>
+        <div class="hr page"></div>
+      </div>
+      <div class="index-list-di" style="background: #f8f8f8">
+        <div class="ovhide page">
+          <div class="index-list-title">服务承诺</div>
+          <div class="ovhide">
+            <div class="g-left index-d-yy">
+              <div>
+                <div class="fw-div-text">
+                  <div class="title">全天热线</div>
+                  <div>24小时热线全天候为您在线，解决疑惑。</div>
+                </div>
+                <div>
+                  <img src="./assets/images/index/index_4.png">
+                </div>
+              </div>
+            </div>
+            <div class="g-right index-d-yy">
+              <div>
+                <div class="fw-div-text">
+                  <div class="title">新客户30天辅导</div>
+                  <div>联系客户，提供服务、培训等。让AI工具发挥作用。 </div>
+                </div>
+                <div>
+                  <img src="./assets/images/index/index_5.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ovhide" style="margin-top: 38px;">
+            <div class="g-left index-d-yy">
+              <div>
+                <div class="fw-div-text">
+                  <div class="title">微信群答疑</div>
+                  <div>微信的便捷沟通特性，及时在线提供所需服务。</div>
+                </div>
+                <div>
+                  <img src="./assets/images/index/index_6.png">
+                </div>
+              </div>
+            </div>
+            <div class="g-right index-d-yy">
+              <div>
+                <div class="fw-div-text">
+                  <div class="title">专属客户经理</div>
+                  <div>为客户提供专属定制服务，及时响应客户需求。</div>
+                </div>
+                <div>
+                  <img src="./assets/images/index/index_7.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="index-list-di">
+        <div class="ovhide page">
+          <div class="index-list-title">服务品牌</div>
+          <img src="./assets/images/index/cheqi1.png" class="cheqi">
+          <img src="./assets/images/index/cheqi2.png" class="cheqi">
+        </div>
+      </div>
+      <div class="fx-left">
+        <div class="fx_ fx-1">
+          <div class="fx-div">
+            <img src="./assets/images/ewm3.png">
+          </div>
+        </div>
+        <div class="fx_ fx-2">
+          <div class="fx-div">
+            <img src="./assets/images/ewm1.png">
+          </div>
+        </div>
+        <div class="fx_ fx-3">
+          <div class="fx-div">
+            <img src="./assets/images/ewm2.png">
+          </div>
+        </div>
+      </div>
+      <%- include('./pubilcViews/foot.jstl',{success:foot||{}}) %>
+
+        <script>
+          document.querySelectorAll('.hread-li')[0].setAttribute('class', 'hread-li click')
+          $('.fx_').on('mouseover', function () {
+            $('.fx-div').hide();
+            $(this).find('.fx-div').show();
+          })
+          $('.fx_').on('mouseout', function () {
+            $(this).find('.fx-div').hide();
+          })
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div style="height: 85px;">
+
+</div>
+<div class="flexslider">
+    <ul class="slides">
+        <li><img src="./assets/images/lb_1.png"  class="href_offer_sy xii"/></li>
+        <li><img src="./assets/images/lb_2.png" class="href_offer_sy jk"/></li>
+        <li><img src="./assets/images/lb_3.png" class="href_offer_sy xii"/></li>
+        <li><img src="./assets/images/lb_4.png" class="href_offer_sy asb"/></li>
+    </ul>
+</div>

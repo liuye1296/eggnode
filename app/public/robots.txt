@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:/css/
+Disallow:/js/
+Disallow:/lib/
+Disallow:/erweima/
+Sitemap: http://www.isales.cn/sitemap.xml

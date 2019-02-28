@@ -1,0 +1,16 @@
+<div class="page-title">
+    <div class="logo">
+        <img src="../mobile/assets/logo.png">
+    </div>
+    <div class="tab">
+        <img src="../mobile/assets/tab.png">
+    </div>
+    <div class="page-lable">
+        <a class="page-lable-la" href="./index.html">首页</a>
+        <a class="page-lable-la" href="./ak.html">小i智能名片</a>
+        <a class="page-lable-la" href="./isales.html">爱售宝</a>
+        <a class="page-lable-la" href="./jq.html">集客神器</a>
+        <a class="page-lable-la" href="./consulting.html">资讯</a>
+        <a class="page-lable-la" href="./abotme.html">关于我们</a>
+    </div>
+</div>

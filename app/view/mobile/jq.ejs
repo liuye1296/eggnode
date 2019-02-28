@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("./pubilcViews/mate.jstl") %>
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <%- include("./pubilcViews/title.jstl") %>
+  <!-- 除开头部 -->
+  <div class="body">
+    <!-- 内容 -->
+    <div class="index-center">
+      <!-- 轮播图 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide" href="./sy.html?type=3">
+            <div class="mfsy">免费试用</div>
+            <img class="poster" src="../mobile/assets/poster3.png" />
+          </a>
+        </div>
+      </div>
+      <!--  tab导航 -->
+      <%- include("./pubilcViews/tab.jstl") %>
+
+      <!--  正文 -->
+      <div class="jq-zw">
+        <div class="isales-zw-cen bjhui">
+          <div class="jq-div-text">
+            <div class="h5">外拓福音</div>
+            <div>邀请客户参与手机抽奖活动，<br /> 快速赢得好感，<br /> 轻松获得留资。
+            </div>
+          </div>
+          <div>
+            <img src="../mobile/assets/jksq_1.png" class="jksq_" />
+          </div>
+        </div>
+        <div class="isales-zw-cen shadow">
+          <div class="jq-div-text">
+            <div class="h5">促销标配</div>
+            <div>采用手机互动游戏抽奖，<br /> 减少物料采购费用，<br /> 多媒体形式让促销更生动。
+            </div>
+          </div>
+          <div>
+            <img src="../mobile/assets/jksq_2.png" class="jksq_" />
+          </div>
+        </div>
+        <div class="isales-zw-cen bjhui">
+          <div class="jq-div-text">
+            <div class="h5">车展必备</div>
+            <div>利用展台大屏幕作为道具，<br /> 吸引观众参与竞技游戏，<br /> 集体摇动手机，引爆全场人气。
+            </div>
+          </div>
+          <div>
+            <img src="../mobile/assets/jksq_3.png" class="jksq_" />
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="asb_ewmya">
+            <div>
+              <img src="../mobile/assets/jksq_ewm.png" class="asb_ewm" />
+              <div class="asb_ewm-a">集客神器 公众号二维码</div>
+            </div>
+            <div class='hasptadag'>
+              长按识别上面二维码，更多功能等着你~</br>
+              联系电话：<span class="isale-phone">400-059-0755 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <%- include("./pubilcViews/foot.jstl") %>
+    </div>
+    <!--  爱售宝申请 -->
+    <a class="mfsq" href="./sy.html?type=1">免费申请</a>
+    <script>
+      document.querySelectorAll('.index-tab-lb')[2].className = 'index-tab-lb click';
+      document.querySelectorAll('.page-lable-la')[3].className = 'page-lable-la click';
+    </script>
+</body>
+
+</html>

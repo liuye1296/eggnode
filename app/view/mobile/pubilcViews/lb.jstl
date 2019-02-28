@@ -1,0 +1,22 @@
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <a class="swiper-slide" href="./sy.html?type=0">
+      <div class="mfsy">免费试用</div>
+      <img class="poster" src="../mobile/assets/poster0.png" />
+    </a>
+    <a class="swiper-slide" href="./sy.html?type=3">
+      <div class="mfsy">免费试用</div>
+      <img class="poster" src="../mobile/assets/poster1.png" />
+    </a>
+    <a class="swiper-slide" href="./sy.html?type=1">
+      <div class="mfsy">免费试用</div>
+      <img class="poster" src="../mobile/assets/poster2.png" />
+    </a>
+    <a class="swiper-slide" href="./sy.html?type=3">
+      <div class="mfsy">免费试用</div>
+      <img class="poster" src="../mobile/assets/poster3.png" />
+    </a>
+  </div>
+  <!-- 如果需要滚动条 -->
+  <div class="swiper-pagination"></div>
+</div>

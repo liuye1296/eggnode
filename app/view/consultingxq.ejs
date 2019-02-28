@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <%- include("./pubilcViews/matenotitle.jstl") %>
+    <title><%= success.TITLE || "isales_智能名片_爱售宝_集客神器_AI赋能销售_轻松获客精准成交_微名片_电子名片_汽车销售_在线化_数字化" %></title>
+</head>
+
+<body>
+    <%- include("./pubilcViews/title.jstl") %>
+        <%- include("./pubilcViews/lunbo.jstl") %>
+            <div class="page">
+                <div class="ovhide condiv" style="color: #666;">
+                    <section id='advisory_content'>
+                        <%  if(success || success.INTRO){ %>
+                            <div class="yx"><%= success.TITLE %></div>
+                            <div class="xq_hr"><%= success.PUBLISH_TIME %></div>
+                            <div>
+                                <%- success.CONTENT %>
+                            </div>
+                        <%  }else{ %>
+                           文章不存在     
+                        <%  } %>
+                    </section>
+                </div>
+                <div style="height: 99px;"></div>
+            </div>
+            </div>
+            <%- include('./pubilcViews/foot.jstl',{success:foot}) %>
+</body>
+</html>

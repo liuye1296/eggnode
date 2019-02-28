@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("./pubilcViews/mate.jstl") %>
+</head>
+
+<body>
+  <!-- 头部导航 -->
+
+  <%- include("./pubilcViews/title.jstl") %>
+  <!-- 除开头部 -->
+  <div class="body">
+    <!-- 内容 -->
+    <div class="index-center">
+      <!-- 轮播图 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <a class="swiper-slide" href="./sy.html?type=3">
+            <div class="mfsy">免费试用</div>
+            <img class="poster" src="../mobile/assets/poster1.png" />
+          </a>
+          <a class="swiper-slide" href="./sy.html?type=3">
+            <div class="mfsy">免费试用</div>
+            <img class="poster" src="../mobile/assets/poster3.png" />
+          </a>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!--  tab导航 -->
+
+      <%- include("./pubilcViews/tab.jstl") %>
+
+      <!--  正文 -->
+      <div class="isales-zw">
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>一张能帮你连接10亿用户的名片</p>
+            用小程序替代传统名片，直接触达微信10亿用户，高效拓客。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg1.png" class="isalesimg">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>一张能帮你经营企业的名片 </p>
+            微企经营系统：用微名片、微商城、微活动、微网站展示自己 和介绍公司，高效传播。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg2.png" class="isalesimg2">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>一张能帮你管理全部人脉的名片 </p>
+            人脉管理系统：独有精准识别名片功能，拍照即可将人脉收纳 到名片夹，摆脱名片成堆的烦恼。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg3.png" class="isalesimg3">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>微信裂变，轻松获客 </p>
+            裂变获客系统：使用小程序名片，即可自动收集客户手机号、 筛选意向客户，重点跟进客户让销售不费力。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg4.png" class="isalesimg4">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>AI赋能，精准成交 </p>
+            AI销售系统：集成SCRM管理、客户智能画像、AI识客等功 能，用算法捕捉成交信号，把握商机，提高成交效率。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg5.png" class="isalesimg5">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>可视化管理，数字化经营 </p>
+            经理管理系统：用销售漏斗、成交曲线等数字图表直观了解客户形态、指导团队工作，实现量化管理、精准决策。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg6.png" class="isalesimg6">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="ak-taxt">
+            <p>进行全员营销，低成本获客的名片 </p>
+            全员营销系统：让全员可参与口碑传播，每个人都成为公司流 量入口。
+          </div>
+          <div>
+            <img src="../mobile/assets/isalesimg7.png" class="isalesimg7">
+          </div>
+        </div>
+        <div class="isales-zw-cen">
+          <div class="asb_ewmya">
+            <div>
+              <img src="../mobile/assets/ak_ewm.png" class="asb_ewm" />
+              <div class="asb_ewm-a">小 i 智能名片 小程序二维码</div>
+            </div>
+            <div class='hasptadag'>
+              长按识别上面二维码，更多功能等着你~</br>
+              联系电话：<span class="isale-phone">400-059-0755 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <%- include("./pubilcViews/foot.jstl") %>
+    </div>
+    <!--  小I申请 -->
+    <a class="mfsq" href="./sy.html?type=3">免费申请</a>
+    <script>
+      document.querySelectorAll('.index-tab-lb')[0].className = 'index-tab-lb click';
+      document.querySelectorAll('.page-lable-la')[1].className = 'page-lable-la click';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<title>isales_智能名片_爱售宝_集客神器_AI赋能销售_轻松获客精准成交_微名片_电子名片_汽车销售_在线化_数字化</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="Keywords" content="智能名片,isales,电子名片,商务名片,企业名片 ,爱售宝,汽车销售,智能化,数字化,精细化管理,集客神器,AI赋能,商业智能">
+<meta name="description" content="iSales，智能销售领导者。旗下三款产品：小i智能名片,用小程序连接10亿用户，实现轻松获客,精准成交；爱售宝，汽车销售精细化管理工具，专治获客难、客户流失、团队执行力弱。集客神器，拓客神器。">
+<meta name="referrer" content="no-referrer" />
+<link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+<!-- <meta http-equiv="Content-Security-Policy" content="frame-src 'self' ;"> -->
+<link href="./css/style.css?ed55df86e126dbc7d235" rel="stylesheet">
+<link href="./css/page.css?ed55df86e126dbc7d235" rel="stylesheet">
+<link href="./lib/css/flexslider.css?ed55df86e126dbc7d235" rel="stylesheet">
+
+<script type="text/javascript">
+    try {
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            window.location.href = "./mobile/index.html";
+        }
+    } catch (e) { }
+</script>

@@ -1,0 +1,107 @@
+.layui-laypage {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+    font-size: 0;
+  }
+  .layui-laypage a {
+    text-decoration: none;
+  }
+  
+  .layui-laypage a, .layui-laypage span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+  }
+  
+  .layui-laypage > a:first-child, .layui-laypage > a:first-child em {
+    border-radius: 2px 0 0 2px;
+  }
+  
+  .layui-box, .layui-box * {
+    box-sizing: content-box;
+  }
+  
+  .layui-laypage .layui-laypage-curr {
+    position: relative;
+  }
+  
+  .layui-laypage a, .layui-laypage button, .layui-laypage input, .layui-laypage select, .layui-laypage span {
+    border: 1px solid #e2e2e2;
+  }
+  
+  .layui-laypage .layui-laypage-curr {
+    color: #fff;
+    background-color: #FF5722;
+    cursor: not-allowed !important;
+  }
+  
+  .layui-laypage > :first-child {
+    margin-left: 0 !important;
+  }
+  
+  .layui-disabled, .layui-disabled:hover {
+    color: #d2d2d2 !important;
+    cursor: not-allowed !important;
+  }
+  
+  .page-fx {
+    width: 840px;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+  }
+  
+  .px {
+    display: none;
+  }
+  
+  .layui-laypage-prev, .layui-laypage-next {
+    cursor: pointer;
+  }
+  .layui-laypage-count{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+  }
+  .layui-laypage-skip {
+    height: 30px!important;
+    line-height: 30px!important;
+    color: #999!important;
+    border: none!important;
+}
+.layui-laypage input {
+  width: 40px;
+  margin: 0 10px;
+  padding: 0 3px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 2px;
+  vertical-align: top;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.layui-laypage button {
+  margin-left: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 2px;
+  vertical-align: top;
+  background-color: #fff;
+  box-sizing: border-box;
+}

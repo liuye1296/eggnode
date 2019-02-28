@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("./pubilcViews/mate.jstl") %>
+  <link href="../mobile/lib/css/minirefresh.min.css?ed55df86e126dbc7d235" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <div class="page-title ts">
+    <div class="logo">
+      资讯
+    </div>
+    <div class="tab">
+      <a href="./index.html">返回首页</a>
+    </div>
+  </div>
+  <!-- 除开头部 -->
+  <div class="body">
+    <div id="minirefresh" class="minirefresh-wrap" style="top:12vw">
+      <div class="minirefresh-scroll">
+        <div id='conshtml'>
+          <% success.items && success.items.map(res=>{ 
+                const split_=res.publish_time.split('-')
+               %>
+          <a class="page__bd_spacing" href="./consultingxq.html?id=<%= res.id %>">
+            <div class="ui-flex hasborder">
+              <div>
+                <div class="ui-yue">
+                  <%= split_[1] %>
+                </div>
+                <div class="ui-data">
+                  <%= split_[2] %>,<%= split_[0] %>
+                </div>
+              </div>
+              <div class="ui-flex-ri">
+                <div class="h5">
+                  <%= res.title %>
+                </div>
+                <div>
+                  <%= res.intro %>
+                </div>
+              </div>
+            </div>
+          </a>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="../mobile/lib/js/minirefresh.min.js" type="text/javascript"></script>
+  <script>
+    var page = {
+      page_num: 1,//当前页数
+      page_size: 10,//一页多少条
+      pageCount: 1,//总页数
+    }
+    var iscz = 'up';
+    // 引入任何一个主题后，都会有一个 MiniRefresh 全局变量
+    var miniRefresh = new MiniRefresh({
+      container: '#minirefresh',
+      down: {
+        callback: function () {
+          // 下拉事件
+          iscz = 'down';
+          page.page_num = 1;
+          ajax({
+            param: {
+              page_num: page.page_num,
+              page_size: page.page_size
+            },
+            callback: setHtml
+          })
+        }
+      },
+      up: {
+        callback: function () {
+          iscz = 'up';
+          ajax({
+            param: {
+              page_num: page.page_num + 1,
+              page_size: page.page_size
+            },
+            callback: setHtml
+          })
+        }
+      }
+    });
+
+
+    function setHtml(res) {
+      //console.log(res)
+      if (res && res.success) {
+        page.page_num = res.success.currentPageIndex;
+        page.pageCount = res.success.pageCount;
+        var htmlObj = document.getElementById('conshtml');
+        if (page.page_num == '1') {
+          htmlObj.innerHTML = '';
+        }
+        res.success.items.map(function (da) {
+          const split_ = da.publish_time.split('-')
+          htmlObj.innerHTML = htmlObj.innerHTML + "<a class=\"page__bd_spacing\" href=\"./consultingxq.html?id=" + da.id + "\"><div class=\"ui-flex hasborder\"><div><div class=\"ui-yue\">" + split_[1] + "</div><div class=\"ui-data\">" + split_[2] + "," + split_[0] + "</div></div><div class=\"ui-flex-ri\"><div class=\"h5\">" + da.title + "</div><div>" + da.intro + "</div></div></div></a>";
+
+        })
+        if (page.page_num >= page.pageCount) {
+          iscz == 'up' ? miniRefresh.endUpLoading(true) : miniRefresh.endDownLoading()
+        } else {
+          iscz == 'up' ? miniRefresh.endUpLoading() : miniRefresh.endDownLoading()
+        }
+      }
+    }
+
+    function ajax(res) {
+      var xhr = new XMLHttpRequest();
+      let data = {
+        "msg": {
+          "cmdid": 5100,
+        },
+        "data": res.param || {}
+      };//这是需要提交的数据
+      data = JSON.stringify(data);
+      xhr.open('POST', 'http://www.isales.cn/isalesbady/gateWay/pubCtrl.do');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            let ret = JSON.parse(xhr.responseText);
+            res.callback(ret)
+          }
+        }
+      };
+      xhr.send(data);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("./pubilcViews/mate.jstl") %>
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <div class="page-title ts">
+    <div class="logo">
+      资讯
+    </div>
+    <div class="tab">
+      <a href="javascript:history.back(-1)">返回</a>
+    </div>
+  </div>
+
+  <!-- 除开头部 -->
+  <div class="body">
+    <div class="page__bd_spacing consultingxq ">
+      <%  if(success || success.content){ %>
+
+      <div class="consultingxq-title">
+        <%= success.title %>
+      </div>
+      <div class="consultingxq-data">
+        <%= success.publish_time %>
+      </div>
+      <div>
+        <%- success.content %>
+      </div>
+      <%  }else{ %>
+      文章不存在
+      <%  } %>
+    </div>
+</body>
+
+</html>

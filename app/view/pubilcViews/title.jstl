@@ -1,0 +1,42 @@
+<div class="isales-head">
+    <div class="page">
+        <div class="hread ">
+            <div class="ovhide">
+                <div class="g-left">
+                    <img src="./assets/images/logo.png" class="logo-img" />
+                </div>
+                <div class="g-right">
+                    <div class="hread-ul ovhide">
+                        <div class="hread-li">
+                            <a href="./index.html">首页</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./ak.html">小i智能名片</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./isales.html">爱售宝</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./jq.html">集客神器</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./channel.html">合作</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./consulting.html">资讯</a>
+                        </div>
+                        <div class="hread-li">
+                            <a href="./aboutme.html">我们</a>
+                        </div>
+                        <div class="hread-li">
+                            <a class="indexlogin" href="http://www.isales.cn/cms">爱售宝登录</a>
+                        </div>
+                        <div class="hread-li">
+                            <a class="indexloginxx" href="http://www.isales.cn/guest">小i智能名片登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("./pubilcViews/mate.jstl") %>
+</head>
+
+<body>
+  <div class="offer-sy-img">
+    <form action="" class="offer-sy-action">
+      <h1 class="offer-sy-h1">申请试用</h1>
+      <div class="offer-sy-inputdiv"><input name="name" id="shop_name" type="text" placeholder="汽车经销店名称" class="offer-sy-input"></div>
+      <div class="offer-sy-inputdiv"><input name="name" id="name" type="text" placeholder="请输入姓名" class="offer-sy-input"></div>
+      <div class="offer-sy-inputdiv"><input name="name" id="phone" type="text" placeholder="请输入手机号码" class="offer-sy-input"></div>
+      <div class="offer-sy-inputdiv">
+        <textarea name="name" id="apply_purpose" type="text">请输入申请目的</textarea>
+      </div>
+
+      <a class="offer-sy-butt" href="javascript:void(0)">提交申请</a>
+    </form>
+
+  </div>
+  <script>
+    "use strict";
+
+    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+    document.querySelector("#apply_purpose").addEventListener("focus", function () {
+      var a = this.value;
+      if (a == "请输入申请目的") {
+        this.value = "";
+      }
+    });
+    document.querySelector("#apply_purpose").addEventListener("blur", function () {
+      var a = this.value;
+      if (a === "") {
+        this.value = "请输入申请目的";
+      }
+    });
+
+    var getParameter = function getParameter(res) {
+      var _this = this;
+
+      _classCallCheck(this, getParameter);
+
+      this.res = res;
+      this.data = {};
+      try {
+        if (res.indexOf("?") != -1) {
+          //有问号   
+          var str = res.substr(1); //截取  
+          var strs = str.split("&");
+          strs.map(function (val, index) {
+            _this.data[val.split("=")[0]] = decodeURI(val.split("=")[1]);
+          });
+          return this.data;
+        }
+      } catch (error) {
+        return this.data;
+      }
+    };
+
+    var data = new getParameter(location.search);
+
+    var Check = function () {
+      function Check() {
+        _classCallCheck(this, Check);
+
+        this._phone = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+      }
+
+      _createClass(Check, [{
+        key: "isEmpty",
+        value: function isEmpty(params) {
+          if (params === "" || (typeof params === "undefined" ? "undefined" : _typeof(params)) === isNaN || params === undefined || params === null || params === "undefined" || params === "null") {
+            return true;
+          }
+          return false;
+        }
+      }, {
+        key: "isPhone",
+        value: function isPhone(params) {
+          return this._phone.test(params);
+        }
+      }]);
+
+      return Check;
+    }();
+
+    document.querySelector(".offer-sy-butt").addEventListener('click', function (res) {
+      var shop_name = document.querySelector("#shop_name").value;
+      var name = document.querySelector("#name").value;
+      var phone = document.querySelector("#phone").value;
+      var check = new Check();
+      if (check.isEmpty(name)) {
+        alert('名字不能为空');
+        return false;
+      }
+      if (check.isEmpty(phone)) {
+        alert('手机号码不能为空');
+        return false;
+      }
+      if (!check.isPhone(phone)) {
+        alert('手机号码不正确');
+        return false;
+      }
+      var cmdid = '4050', url = '';
+      var curProtocol = window.location.protocol.split(':')[0];
+      //url = curProtocol + '://www.isales.cn/dmb/gateWay/pubCtrl.do';
+      url = curProtocol + '://www.isales.cn/isalesbady/gateWay/pubCtrl.do';// 正式
+      if (data.type === '3') {
+        cmdid = '1902';
+        //url = curProtocol + '://www.isales.cn/ai/app/gateWay/pubCtrl.do';
+        url = curProtocol + '://www.isales.cn/guest/app/gateWay/pubCtrl.do'; //正式
+      }
+      var msg = {
+        'cmdid': cmdid,
+        // "ct": "5",
+        // "device_id": "A46E4E84-B5BD-4542-A8AD-E08DADFDD0AC",
+        // "user_id": "",
+        // "station_id": "",
+        // "identity_type": "2",
+        // "session_id": ""
+      };
+      var dat = {
+        'apply_from': '0',
+        "phone": phone,
+        "name": name,
+        "shop_name": shop_name,
+        "apply_purpose": $("#apply_purpose").val(),
+        type: data.type
+      };
+      var da = {
+        "msg": msg,
+        "data": dat
+      };
+      da = JSON.stringify(da);
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      if (data.type === '0') {
+        xhr.setRequestHeader('Content-Type', 'application/json');
+      } else {
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      }
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            //const ret = JSON.parse(xhr.responseText);
+            alert('您的试用申请我们已经收到，我们将安排客户经理3个工作日内给您落实相关工作。请保持手机畅通！');
+          }
+        }
+      };
+      xhr.send(da);
+    });
+
+  </script>
+</body>
+
+</html>

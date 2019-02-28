@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include("./pubilcViews/mate.jstl") %>
+  
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <%- include("./pubilcViews/title.jstl") %>
+  <!-- 除开头部 -->
+  <div class="body">
+    <!-- 内容 -->
+    <div class="index-center">
+      <!-- 轮播图 -->
+      <%- include("./pubilcViews/lb.jstl") %>
+
+      <!--  tab导航 -->
+      <%- include("./pubilcViews/tab.jstl") %>
+
+
+      <!--  正文 -->
+      <div class="index-zw">
+        <div class="index-zwdl">
+          <div>
+            <img src="../mobile/assets/ailogo.png" class="ailogo" />
+          </div>
+          <div class="subtitle">
+            小i智能名片，一张可以帮你卖车的名片
+          </div>
+          <div>
+            她用小程序连接10亿用户轻松获客，用AI算法实现精准 成交；独有七大赋能系统，让社交,变成交
+          </div>
+          <div>
+            <img src="../mobile/assets/aibj.png" class="aibj" />
+            <a class="aibj-but" href="./sy.html?type=3">查看详情</a>
+          </div>
+        </div>
+
+        <div class="index-zwdl">
+          <div>
+            <img src="../mobile/assets/asblogo.png" class="asblogo" />
+          </div>
+          <div class="subtitle">
+            爱售宝，汽车销售精细化管理工具
+          </div>
+          <div>
+            针对“车商管理四大难题”获客难、客户易流失、销售跟 进不及时、团队执行力差等提供实操性解决方案。用技术 实现汽车销量提升。
+          </div>
+          <div>
+            <img src="../mobile/assets/asbbj.png" class="aibj" />
+            <a class="aibj-but" href="./sy.html?type=3">查看详情</a>
+          </div>
+        </div>
+
+
+        <div class="index-zwdl">
+          <div>
+            <img src="../mobile/assets/jksqlogo.png" class="jksqlogo" />
+          </div>
+          <div class="subtitle">
+            集客神器，线下活动必备工具
+          </div>
+          <div>
+            促销标配，邀请客户参与手机抽奖，减少物料，留资高效。 展会必备，利用竞技游戏引爆全场，组织简单，自动留资， 与“爱售宝app”结合使用，线索收集、管理全数字化。
+          </div>
+          <div>
+            <img src="../mobile/assets/jksqbj.png" class="aibj" />
+            <a class="aibj-but" href="./sy.html?type=3">查看详情</a>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <%- include("./pubilcViews/foot.jstl") %>
+      <!--  爱售宝申请 -->
+    <a class="mfsq" href="sy.html?type=0">申请试用 即送百元红包</a>
+    </div>
+    <script>
+      document.querySelectorAll('.page-lable-la')[0].className='page-lable-la click';
+    </script>
+</body>
+
+</html>
